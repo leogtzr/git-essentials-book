@@ -14,3 +14,18 @@ git cat-file -p HASH
 git --no-pager log --format=raw
 git --no-pager log --format=fuller
 git --no-pager log --oneline
+git -P log --no-color --oneline --graph --decorate
+git -P log --no-color --oneline --graph --decorate --all 			# display for all the branches.
+
+# Add and commit
+git commit -am "message"
+
+# How to create a branch
+git branch berries
+
+# How to check the current branch:
+git -P branch --no-color
+
+# How to switch to a branch:
+git checkout berries
+git checkout - 			# switch to the previous branch where we were
