@@ -29,3 +29,24 @@ git -P branch --no-color
 # How to switch to a branch:
 git checkout berries
 git checkout - 			# switch to the previous branch where we were
+
+# Moving to a previous state:
+
+[0 [11:46][leo@grocery]$ git -P log --no-color --oneline --graph --decorate --all
+* d8591a1 (HEAD -> berries) add a blackberry
+* 8b637e6 (master) add an orange
+* 928c44c add an aple
+* d5f7c43 removing additional line to sync up with the book
+* c17f32e Add durazno to the shopping list :)
+[0 [11:47][leo@grocery]$ man git reset
+[0 [11:48][leo@grocery]$ git reset --hard master
+HEAD is now at 8b637e6 add an orange
+[0 [11:49][leo@grocery]$ git -P log --no-color --oneline --graph --decorate --all
+* 8b637e6 (HEAD -> berries, master) add an orange
+* 928c44c add an aple
+* d5f7c43 removing additional line to sync up with the book
+* c17f32e Add durazno to the shopping list :)
+[0 [11:49][leo@grocery]$ 
+
+# Move the actual branch to a specific commit:
+git reset --hard HASH
