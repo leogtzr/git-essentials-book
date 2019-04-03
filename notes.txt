@@ -10,4 +10,7 @@ Default is repo level if non of the options are specified.
 # How to check blobs:
 git cat-file -p HASH
 
-
+# git log
+git --no-pager log --format=raw
+git --no-pager log --format=fuller
+git --no-pager log --oneline
