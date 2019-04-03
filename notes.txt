@@ -1,0 +1,8 @@
+# How to list global config without a pager:
+git --no-pager config -l
+
+# How to set config at local repo level:
+git config --local user.name "Your Name"
+git config --local user.email you@example.com
+--system for system-wide, --global for user level.
+Default is repo level if non of the options are specified.
