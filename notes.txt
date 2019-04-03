@@ -6,3 +6,8 @@ git config --local user.name "Your Name"
 git config --local user.email you@example.com
 --system for system-wide, --global for user level.
 Default is repo level if non of the options are specified.
+
+# How to check blobs:
+git cat-file -p HASH
+
+
