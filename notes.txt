@@ -63,6 +63,15 @@ git reset --hard HASH
 HEAD is now at d8591a1 add a blackberry
 [0 [13:01][leo@grocery]$ 
 
+# How to check reflogs for a specific branch:
+leo@lein ~/code/repos/grocery (master) $ git -P branch
+  berries
+  bug
+* master
+  melons
+leo@lein ~/code/repos/grocery (master) $ git -P reflog show melons
+a075685 (melons) melons@{0}: branch: Created from berries
+leo@lein ~/code/repos/grocery (master) $ 
 
 
 
