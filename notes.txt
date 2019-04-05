@@ -76,9 +76,11 @@ leo@lein ~/code/repos/grocery (master) $
 # How to create a tag to a specific commit:
 git tag myTag COMMIT-HASH
 
+# How to create an annotated tag:
+git tag -a annotatedTag f5c8b7c
 
-
-
+# To unstage the change:
+git reset HEAD
 
 References
 http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
