@@ -82,6 +82,30 @@ git tag -a annotatedTag f5c8b7c
 # To unstage the change:
 git reset HEAD
 
+# Differences between the working tree and the staged area:
+git diff
+git -P diff
+
+# Differences between the last commit and the staged area:
+leo@lein ~/code/repos/grocery (master) $ git -P diff --cached HEAD
+diff --git a/shoppingList.txt b/shoppingList.txt
+index 175eeef..f961a4c 100644
+--- a/shoppingList.txt
++++ b/shoppingList.txt
+@@ -2,3 +2,4 @@ banana
+ apple
+ orange
+ peach
++onion
+leo@lein ~/code/repos/grocery (master) $ 
+
+Or:
+git diff --cached
+
+# Differences between the HEAD version and the working tree:
+git diff HEAD
+git -P diff HEAD
+
 References
 http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
 
