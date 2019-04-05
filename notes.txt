@@ -50,3 +50,27 @@ HEAD is now at 8b637e6 add an orange
 
 # Move the actual branch to a specific commit:
 git reset --hard HASH
+
+# How to step back:
+[0 [13:00][leo@grocery]$ git -P log --no-color --oneline --graph --decorate --all
+* a075685 (HEAD -> berries, melons) add a watermelon
+* d8591a1 add a blackberry
+* 8b637e6 (master) add an orange
+* 928c44c add an aple
+* d5f7c43 removing additional line to sync up with the book
+* c17f32e Add durazno to the shopping list :)
+[0 [13:00][leo@grocery]$ git reset --hard HEAD^
+HEAD is now at d8591a1 add a blackberry
+[0 [13:01][leo@grocery]$ 
+
+
+
+
+
+
+
+
+References
+http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
+
+
