@@ -73,7 +73,8 @@ leo@lein ~/code/repos/grocery (master) $ git -P reflog show melons
 a075685 (melons) melons@{0}: branch: Created from berries
 leo@lein ~/code/repos/grocery (master) $ 
 
-
+# How to create a tag to a specific commit:
+git tag myTag COMMIT-HASH
 
 
 
