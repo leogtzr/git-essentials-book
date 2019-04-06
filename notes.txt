@@ -106,6 +106,29 @@ git diff --cached
 git diff HEAD
 git -P diff HEAD
 
+# Removing changes from the staging area
+git reset HEAD <FILE>
+
+If we want to go back or destroy the changes:
+git checkout -- <shoppingList.txt|FILE>
+
+[0 [10:53]leo@lein ~/code/repos/grocery (master) $ git checkout -- shoppingList.txt 
+[0 [10:53]leo@lein ~/code/repos/grocery (master) $ git -P diff
+[0 [10:53]leo@lein ~/code/repos/grocery (master) $ git -P status
+On branch master
+nothing to commit, working tree clean
+[0 [10:53]leo@lein ~/code/repos/grocery (master) $ 
+
+# How to delete a branch:
+git branch -d <BRANCH-NAME>
+
+[0 [10:53]leo@lein ~/code/repos/grocery (master) $ git branch -d bug
+error: The branch 'bug' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D bug'.
+[0 [10:53]leo@lein ~/code/repos/grocery (master) $ git branch -D bug
+Deleted branch bug (was eb21648).
+[0 [10:53]leo@lein ~/code/repos/grocery (master) $ 
+
 References
 http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
 
