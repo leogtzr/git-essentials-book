@@ -129,6 +129,26 @@ If you are sure you want to delete it, run 'git branch -D bug'.
 Deleted branch bug (was eb21648).
 [0 [10:53]leo@lein ~/code/repos/grocery (master) $ 
 
+# How to go into a detached state:
+git checkout HEAD~1
+
+# How to check differences with the staging area:
+git diff --cached HEAD
+
+# How to clean up all the staged changes in one shot:
+git reset HEAD
+
+# How to overwrite all the three areas:
+git reset --hard master
+
+# How to go to a non-detached state:
+git checkout master
+
+# rebase:
+-Combine two or more commits into a new one
+-Discard a previous commit you did
+-Change the starting point of a branch, split it, and much more
+
 References
 http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
 
