@@ -158,5 +158,19 @@ git rebase --continue
 # How to clone a local repo
 git clone <LOCAL-REPO-PATH> .
 
+# How to amend/change a commit author name after changing it:
+git commit --amend --reset-author
+
+# How to push a new branch to the remote
+git branch <new-branch-name>
+git checkout <new-branch-name>
+git add <new-file>
+git commit -m <commit msg>
+git push -u origin <new-branch-name>
+
+# How to check remotes:
+git remote -v
+git remote show origin
+
 References
 http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
