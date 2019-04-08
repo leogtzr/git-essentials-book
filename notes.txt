@@ -119,7 +119,7 @@ On branch master
 nothing to commit, working tree clean
 [0 [10:53]leo@lein ~/code/repos/grocery (master) $ 
 
-# How to delete a branch:
+# How to delete/remove a branch:
 git branch -d <BRANCH-NAME>
 
 [0 [10:53]leo@lein ~/code/repos/grocery (master) $ git branch -d bug
@@ -149,7 +149,14 @@ git checkout master
 -Discard a previous commit you did
 -Change the starting point of a branch, split it, and much more
 
+# How to rebase the last two commits:
+git rebase -i HEAD~2
+
+# How to continue a rebase branch after fixing a merge conflict:
+git rebase --continue
+
+# How to clone a local repo
+git clone <LOCAL-REPO-PATH> .
+
 References
 http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
-
-
