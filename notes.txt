@@ -124,7 +124,7 @@ git branch -d <BRANCH-NAME>
 
 [0 [10:53]leo@lein ~/code/repos/grocery (master) $ git branch -d bug
 error: The branch 'bug' is not fully merged.
-If you are sure you want to delete it, run 'git branch -D bug'.
+If you are sure you want to delete it, run 'git branch -D bug'
 [0 [10:53]leo@lein ~/code/repos/grocery (master) $ git branch -D bug
 Deleted branch bug (was eb21648).
 [0 [10:53]leo@lein ~/code/repos/grocery (master) $ 
@@ -171,6 +171,33 @@ git push -u origin <new-branch-name>
 # How to check remotes:
 git remote -v
 git remote show origin
+
+# How to list the configuration:
+git -P config --list --local
+git -P config --list --global
+
+# How to change the default editor:
+git config --global core.editor emacs
+
+# Typos autocorrection:
+git config --global help.autocorrect 10
+
+# Git aliases:
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.cm "commit -m"
+git config --global alias.cm '!git add -A . && git commit -m'
+
+# Removing an alias:
+git config --global --unset alias.cm
+
+# Git unstage alias:
+git config --global alias.unstage 'reset HEAD --'
+
+# Last commit:
+git -P log -1 HEAD
 
 References
 http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
