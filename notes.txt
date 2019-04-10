@@ -213,5 +213,8 @@ git show <HASH>
 # How to archive a repository without versioning information:
 git archive master --format=zip --output=/tmp/repomaster.zip
 
+# How to rename a branch:
+git branch -m trunk master
+
 References
 http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
