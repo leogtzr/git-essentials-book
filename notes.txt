@@ -199,5 +199,19 @@ git config --global alias.unstage 'reset HEAD --'
 # Last commit:
 git -P log -1 HEAD
 
+# How to drop the last stash created:
+git stash drop
+
+# How to clear all the stashes:
+git stash clear
+
+# How to check blames:
+git blame <FILE>
+then use the HASH to check the commit with git show
+git show <HASH>
+
+# How to archive a repository without versioning information:
+git archive master --format=zip --output=/tmp/repomaster.zip
+
 References
 http://www.paulboxley.com/blog/2011/06/git-caret-and-tilde
